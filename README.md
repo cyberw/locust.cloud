@@ -1,0 +1,1 @@
+# locust.cloud static webpage, deployed via Github Pages
