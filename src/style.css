@@ -98,6 +98,37 @@ code {
   background: var(--code-bg);
 }
 
+pre.vscode-dark {
+  background: #1e1e1e;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-align: left;
+  overflow-x: auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+
+  code {
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 160%;
+    background: none;
+    padding: 0;
+    color: #d4d4d4;
+    display: block;
+    white-space: pre;
+  }
+
+  .py-kw   { color: #569cd6; }  /* keywords: from, import, class, def, for, in */
+  .py-class { color: #4ec9b0; } /* class name */
+  .py-fn   { color: #dcdcaa; }  /* function / method names */
+  .py-dec  { color: #c586c0; }  /* decorators */
+  .py-self { color: #9cdcfe; }  /* self */
+  .py-str  { color: #ce9178; }  /* strings */
+  .py-interp { color: #9cdcfe; } /* f-string interpolation */
+  .py-num  { color: #b5cea8; }  /* numbers */
+  .py-op   { color: #d4d4d4; }  /* operators */
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -262,28 +293,6 @@ code {
       justify-content: center;
       box-sizing: border-box;
     }
-  }
-}
-
-#center .center-link {
-  color: var(--text-h);
-  font-size: 16px;
-  border-radius: 6px;
-  background: var(--social-bg);
-  display: inline-flex;
-  padding: 6px 12px;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  transition: box-shadow 0.3s;
-
-  &:hover {
-    box-shadow: var(--shadow);
-  }
-
-  .button-icon {
-    height: 18px;
-    width: 18px;
   }
 }
 
