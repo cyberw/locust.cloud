@@ -26,9 +26,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             time.<span class="py-fn">sleep</span>(<span class="py-num">1</span>)
 
     <span class="py-kw">def</span> <span class="py-fn">on_start</span>(<span class="py-self">self</span>):
-        <span class="py-self">self</span>.client.<span class="py-fn">post</span>(<span class="py-str">&quot;/login&quot;</span>, json<span class="py-op">=</span>{<span class="py-str">&quot;username&quot;</span>: <span class="py-str">&quot;foo&quot;</span>, <span class="py-str">&quot;password&quot;</span>: <span class="py-str">&quot;bar&quot;</span>})</code>
-        </pre>
-  <h2><a href="https://docs.locust.io/en/stable/installation.html">Get started now &gt;&gt;</a></h2>
+        <span class="py-self">self</span>.client.<span class="py-fn">post</span>(<span class="py-str">&quot;/login&quot;</span>, json<span class="py-op">=</span>{<span class="py-str">&quot;username&quot;</span>: <span class="py-str">&quot;foo&quot;</span>, <span class="py-str">&quot;password&quot;</span>: <span class="py-str">&quot;bar&quot;</span>})</code></pre>
+  <h2><a href="https://docs.locust.io/en/stable/installation.html">Get started now</a></h2>
   </div>
 </section>
 <section id="next-steps">

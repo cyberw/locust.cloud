@@ -117,10 +117,10 @@ pre.vscode-dark {
     min-width: 100%;
     width: max-content;
     white-space: pre;
-    font-size: 16px;
+    font-size: 0.9em;
 
     @media (max-width: 1024px) {
-      font-size: 12px;
+      font-size: 0.6em;
     }
   }
 
