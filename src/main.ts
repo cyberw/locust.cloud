@@ -11,6 +11,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
   <div>
     Advanced open-source load testing written in plain Python
+  </div>
+  <div>
     <pre class="vscode-dark"><code><span class="py-kw">from</span> locust <span class="py-kw">import</span> HttpUser, task
 <span class="py-kw">import</span> time
 

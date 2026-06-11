@@ -106,7 +106,10 @@ pre.vscode-dark {
   border-radius: 8px;
   padding: 20px 24px;
   text-align: left;
+  max-width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 
   code {
@@ -116,13 +119,10 @@ pre.vscode-dark {
     background: none;
     padding: 0;
     color: #d4d4d4;
-    display: block;
+    display: inline-block;
+    min-width: 100%;
+    width: max-content;
     white-space: pre;
-
-    @media (max-width: 600px) {
-      font-size: 11px;
-      line-height: 150%;
-    }
   }
 
   .py-kw   { color: #569cd6; }  /* keywords: from, import, class, def, for, in */
