@@ -109,7 +109,6 @@ pre.vscode-dark {
 
   code {
     font-family: var(--mono);
-    font-size: 0.8em;
     line-height: 160%;
     background: none;
     padding: 0;
@@ -118,6 +117,11 @@ pre.vscode-dark {
     min-width: 100%;
     width: max-content;
     white-space: pre;
+    font-size: 16px;
+
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
   }
 
   .py-kw   { color: #569cd6; }  /* keywords: from, import, class, def, for, in */
