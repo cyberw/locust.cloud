@@ -1,6 +1,7 @@
 import './style.css'
 import readthedocsLogo from './assets/readthedocs.svg'
 import mediumLogo from './assets/medium.svg'
+import azureLogo from './assets/azure.svg?raw'
 import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -54,10 +55,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div id="social">
     <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
     <h2>Run Locust at scale</h2>
-    <ul>
-      <li><a href="https://discord.gg/faeXQY82Zs"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Try Azure App Testing</a></li>
-      <li><a href="https://discord.gg/faeXQY82Zs"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Documentation</a></li>
-    </ul>
+    <div class="azure-banner">
+      <span class="azure-logo">${azureLogo}</span>
+      <div class="azure-banner-body">
+        <p>You can seamlessly scale your existing Locust scripts on Microsoft Azure using Azure App Testing</p>
+      </div>
+      <div class="azure-banner-actions">
+        <a class="azure-cta" href="https://aka.ms/AzAppTest">Try Azure App Testing &rarr;</a>
+        <a class="azure-docs" href="https://aka.ms/loadtesting/quickstart-locust">Read the docs</a>
+      </div>
+    </div>
   </div>
 </section>
 

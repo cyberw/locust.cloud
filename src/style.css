@@ -6,7 +6,10 @@
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-bg-subtle: rgba(170, 59, 255, 0.03);
   --accent-border: rgba(170, 59, 255, 0.5);
+  --accent-cta: #7c3aed;
+  --accent-cta-hover: #6d28d9;
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -39,7 +42,10 @@
     --code-bg: #1f2028;
     --accent: #c084fc;
     --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-bg-subtle: rgba(192, 132, 252, 0.03);
     --accent-border: rgba(192, 132, 252, 0.5);
+    --accent-cta: #7c3aed;
+    --accent-cta-hover: #6d28d9;
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -193,6 +199,11 @@ pre.vscode-dark {
 #next-steps {
   display: flex;
   text-align: left;
+  margin-top: 56px;
+
+  @media (max-width: 1024px) {
+    margin-top: 32px;
+  }
 
   & > div {
     flex: 1 1 0;
@@ -203,7 +214,7 @@ pre.vscode-dark {
   }
 
   .icon {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     width: 22px;
     height: 22px;
   }
@@ -221,8 +232,9 @@ pre.vscode-dark {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 0;
 
   .logo {
     height: 18px;
@@ -239,6 +251,8 @@ pre.vscode-dark {
     gap: 8px;
     text-decoration: none;
     transition: box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 
     &:hover {
       box-shadow: var(--shadow);
@@ -257,18 +271,6 @@ pre.vscode-dark {
 
   @media (max-width: 1024px) {
     margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
   }
 }
 
@@ -282,4 +284,64 @@ pre.vscode-dark {
 .ticks {
   position: relative;
   width: 100%;
+}
+
+.azure-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px;
+  margin: 16px 0;
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  background: var(--accent-bg-subtle);
+
+  .azure-logo {
+    display: inline-flex;
+    color: var(--text-h);
+
+    svg {
+      height: 26px;
+      width: auto;
+    }
+  }
+
+  .azure-banner-body p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 145%;
+  }
+
+  .azure-banner-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .azure-cta {
+    background: var(--accent-cta);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background 0.2s, box-shadow 0.3s;
+
+    &:hover {
+      background: var(--accent-cta-hover);
+      box-shadow: var(--shadow);
+    }
+  }
+
+  .azure-docs {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
 }
